@@ -12,6 +12,18 @@
         <div class="section-A">
           <div class="container">
             <div class="header-section">
+              <div id="main-nav" class="responsive-nav">
+                <div onclick="closeNav()" class="cross"></div>
+                <nav>
+                    <ul>
+                        <li><a  href="#">HOME</a></li>
+                        <li><a href="#">FEATURES</a></li>
+                        <li><a  href="#">MONITORS</a></li>
+                        <li><a  href="#">HELP</a></li>
+                    </ul>
+                </nav>
+              </div>
+
               <figure>
                 <a href="#">
                   <img class="logo-img" src="public/images/Logo.png" />
@@ -35,7 +47,8 @@
                 <img class="man-img" src="public/images/man-user.png" />
                 <a href="#">Dashboard</a>
               </button>
-              <img class="menu_icon hidden" src="./public/images/menu.png" />
+
+              <img onclick="openNav()" id="bars" class="menu_icon hidden" src="./public/images/menu.png" />
             </div>
             <div class="sectionA-wrapper">
               <div class="intro-section">
@@ -319,5 +332,17 @@
             <p>© 2019 <span> SK Supply</span></p>
         </div>
       </div>
+
+      <script>
+        closeNav = function() {
+          document.getElementById("main-nav").style.display = "none";
+          document.getElementById("bars").style.display = "block";
+        }
+
+        openNav = function() {
+            document.getElementById("main-nav").style.display = "block";
+            document.getElementById("bars").style.display = "none";
+        }
+      </script>
   </body>
 </html>
